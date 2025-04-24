@@ -30,7 +30,7 @@
       ];
     };
     homeConfigurations."nix-on-droid" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      pkgs = nixpkgs.legacyPackages.aarch64-linux;
 
       modules = [
         nvf.homeManagerModules.default
