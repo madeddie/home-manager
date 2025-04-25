@@ -12,6 +12,14 @@
     pkgs.todo-txt-cli
   ];
 
+  home.file = {
+    todotxtconfig = {
+      target = ".todo/config";
+      text = ''
+        export TODO_DIR=''${HOME}/Documents/notes
+      '';
+    };
+  };
   editorconfig = {
     enable = true;
     settings = {
