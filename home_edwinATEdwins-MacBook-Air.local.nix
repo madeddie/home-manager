@@ -7,6 +7,10 @@
   home.homeDirectory = "/Users/edwin";
   home.stateVersion = "24.11";
 
+  home.sessionVariables = {
+    TODO_DIR = "$HOME/Documents/notes";
+  };
+
   services = {
     gpg-agent = {
       pinentryPackage = pkgs.pinentry_mac;
