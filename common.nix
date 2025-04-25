@@ -18,7 +18,7 @@
     TODOTXT_DATE_ON_ADD = 1;
   };
 
-  home.shellAliass = {
+  home.shellAliases = {
     t = "todo.sh";
     ta = "todo.sh add";
   };
