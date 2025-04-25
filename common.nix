@@ -18,6 +18,11 @@
     TODOTXT_DATE_ON_ADD = 1;
   };
 
+  home.shellAliass = {
+    t = "todo.sh";
+    ta = "todo.sh add";
+  };
+
   editorconfig = {
     enable = true;
     settings = {
