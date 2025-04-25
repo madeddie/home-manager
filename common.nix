@@ -9,6 +9,7 @@
     pkgs.k9s
     pkgs.krew
     pkgs.kubectl
+    pkgs.todo-txt-cli
   ];
 
   editorconfig = {
