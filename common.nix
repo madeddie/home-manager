@@ -15,6 +15,7 @@
   home.sessionVariables = {
     TODOTXT_CFG_FILE = "/dev/null";
     TODOTXT_DEFAULT_ACTION = "list";
+    TODOTXT_DATE_ON_ADD = 1;
   };
 
   editorconfig = {
