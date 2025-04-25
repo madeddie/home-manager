@@ -98,10 +98,18 @@
           enable = true;
         };
         languages = {
+          bash.enable = true;
+          go.enable = true;
+          lua.enable = true;
+          markdown.enable = true;
           nix.enable = true;
           python.enable = true;
-          go.enable = true;
-          markdown.enable = true;
+        };
+        mini = {
+          comment.enable = true;
+          completion.enable = true;
+          icons.enable = true;
+          snippets.enale = true;
         };
         utility = {
           diffview-nvim.enable = true;
@@ -110,6 +118,9 @@
             enable = true;
             useVendoredKeybindings = false;
           };
+        };
+        visuals = {
+          nvim-web-devicons.enable = true;
         };
         statusline = {
           lualine = {
@@ -123,6 +134,7 @@
           style = "dark";
           transparent = false;
         };
+        autopairs.nvim-autopairs.enable = true;
         binds = {
           whichKey.enable = true;
         };
