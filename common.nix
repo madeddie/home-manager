@@ -109,7 +109,7 @@
           comment.enable = true;
           completion.enable = true;
           icons.enable = true;
-          snippets.enale = true;
+          snippets.enable = true;
         };
         utility = {
           diffview-nvim.enable = true;
