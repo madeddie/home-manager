@@ -160,6 +160,7 @@
         ];
         telescope.enable = true;
 
+        treesitter.grammars = [pkgs.vimPlugins.nvim-treesitter-parsers.todotxt];
         git = {
           enable = true;
         };
