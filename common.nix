@@ -6,7 +6,9 @@
 }: {
   home.packages = with pkgs; ([
     pkgs.bat
+    pkgs.curl
     pkgs.devbox
+    pkgs.jq
     pkgs.k9s
     pkgs.krew
     pkgs.kubectl
