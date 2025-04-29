@@ -8,12 +8,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf.url = "github:notashelf/nvf";
+    madeddie-nur = {
+      url = "github:madeddie/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nvf,
+    madeddie-nur,
     ...
   }: {
     defaultPackage = {
@@ -28,6 +33,9 @@
         ./common.nix
         ./home_edwinATEdwins-MacBook-Air.local.nix
       ];
+      extraSpecialArgs = {
+        inherit madeddie-nur;
+      };
     };
     homeConfigurations."nix-on-droid" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-linux;
@@ -37,6 +45,9 @@
         ./common.nix
         ./home_nix-on-droid.nix
       ];
+      extraSpecialArgs = {
+        inherit madeddie-nur;
+      };
     };
   };
 }

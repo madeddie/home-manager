@@ -1,9 +1,10 @@
 {
   config,
   pkgs,
+  madeddie-nur,
   ...
 }: {
-  home.packages = [
+  home.packages = with pkgs; ([
     pkgs.bat
     pkgs.devbox
     pkgs.k9s
@@ -13,7 +14,8 @@
     pkgs.nix-update
     pkgs.todo-txt-cli
     pkgs.oci-cli
-  ];
+    madeddie-nur.packages.${system}.openhue-cli
+  ]);
 
   home.sessionVariables = {
     TODOTXT_CFG_FILE = "/dev/null";

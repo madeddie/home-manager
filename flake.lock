@@ -56,6 +56,26 @@
         "type": "github"
       }
     },
+    "madeddie-nur": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1745791088,
+        "narHash": "sha256-ORBiqqzze36UqUdyaerSFNdHsF7Ayh0VgH2uKzI2lw8=",
+        "owner": "madeddie",
+        "repo": "nur-packages",
+        "rev": "c5f9e5f847c21e9f7a49054cbb46d52fdc72d265",
+        "type": "github"
+      },
+      "original": {
+        "owner": "madeddie",
+        "repo": "nur-packages",
+        "type": "github"
+      }
+    },
     "mnw": {
       "locked": {
         "lastModified": 1744597985,
@@ -170,6 +190,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "madeddie-nur": "madeddie-nur",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf"
       }
