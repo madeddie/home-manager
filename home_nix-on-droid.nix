@@ -13,7 +13,7 @@
 
   services = {
     gpg-agent = {
-      pinentryPackage = pkgs.pinentry-tty;
+      pinentryPackage = pkgs.pinentry-curses;
     };
   };
 }
