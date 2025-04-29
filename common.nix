@@ -9,7 +9,10 @@
     pkgs.k9s
     pkgs.krew
     pkgs.kubectl
+    pkgs.nix-prefetch
+    pkgs.nix-update
     pkgs.todo-txt-cli
+    pkgs.oci-cli
   ];
 
   home.sessionVariables = {
@@ -187,15 +190,17 @@
         filetree.neo-tree.enable = true;
       };
     };
-    lazygit.enable = true;
-    fzf.enable = true;
-    gpg.enable = true;
-    gh.enable = true;
-    go.enable = true;
     kubecolor = {
       enable = true;
       enableAlias = true;
     };
+    fd.enable = true;
+    fzf.enable = true;
+    gh.enable = true;
+    go.enable = true;
+    gpg.enable = true;
+    lazygit.enable = true;
+    ripgrep.enable = true;
   };
 }
 # vim: ft=nix

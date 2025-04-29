@@ -38,6 +38,7 @@
 
           rust.enable = true;
           php.enable = true;
+          nix.format.enable = false;
         };
       };
     };
