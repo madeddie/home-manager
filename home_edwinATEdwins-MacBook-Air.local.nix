@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -11,6 +10,24 @@
     TODO_DIR = "$HOME/Documents/notes";
   };
 
+  home.packages = with pkgs; ([
+    nerd-fonts.droid-sans-mono
+    wireguard-go
+    wireguard-tools
+  ]);
+
+  home.file = {
+    ghostty_config = {
+      enable = true;
+      target = ".config/ghostty/config";
+      text = ''
+        font-family = DroidSansM Nerd Font
+        font-size = 10
+        theme = GruvBoxDark
+      '';
+    };
+  };
+
   services = {
     gpg-agent = {
       pinentryPackage = pkgs.pinentry_mac;
@@ -18,6 +35,7 @@
   };
 
   programs = {
+    java.enable = true;
     zsh = {
       enableVteIntegration = true;
       profileExtra = "source ~/.orbstack/shell/init.zsh 2>/dev/null || :";
@@ -28,6 +46,16 @@
         ];
       };
     };
+    vscode.enable = true;
+    ghostty = {
+      enable = false;
+      settings = {
+        font-family = "DroidSansM Nerd Font";
+        font-size = 10;
+        theme = "GruvBox";
+      };
+    };
+
     # TODO split off nvf
     nvf = {
       settings.vim = {
@@ -41,6 +69,12 @@
           nix.format.enable = false;
         };
       };
+    };
+  };
+
+  fonts = {
+    fontconfig = {
+      enable = true;
     };
   };
 }
