@@ -1,21 +1,26 @@
 {
-  config,
   pkgs,
   madeddie-nur,
   ...
 }: {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
   home.packages = with pkgs; ([
-    pkgs.bat
-    pkgs.curl
-    pkgs.devbox
-    pkgs.jq
-    pkgs.k9s
-    pkgs.krew
-    pkgs.kubectl
-    pkgs.nix-prefetch
-    pkgs.nix-update
-    pkgs.todo-txt-cli
-    pkgs.oci-cli
+    bat
+    curl
+    devbox
+    jq
+    k9s
+    krew
+    kubectl
+    nix-prefetch
+    nix-update
+    todo-txt-cli
+    oci-cli
+    pwgen
     madeddie-nur.packages.${system}.openhue-cli
   ]);
 
