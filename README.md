@@ -22,8 +22,11 @@ These configs can be used to set up my Android terminal and MacOS machines.
 
 ## Steps to initialize Home Manager
 
-1. `nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update`
+1.
+
+        nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+        nix-channel --update
+
 2. `nix run home-manager/master -- --switch`
 3. `home-manager switch`
 
