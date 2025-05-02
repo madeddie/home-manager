@@ -52,7 +52,14 @@
         ];
       };
     };
-    vscode.enable = true;
+    vscode = {
+      enable = true;
+      profiles.default = {
+        extensions = [
+          pkgs.vscode-extensions.jdinhlife.gruvbox
+        ];
+      };
+    };
     ghostty = {
       enable = false;
       settings = {

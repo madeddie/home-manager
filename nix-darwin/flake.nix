@@ -29,7 +29,6 @@
           "orbstack"
           "protonvpn"
           "slack"
-          "visual-studio-code"
           "zoom"
         ];
       };
