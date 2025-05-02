@@ -8,47 +8,17 @@
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
-  let
-    configuration = { pkgs, ... }: {
-      environment.systemPackages = [];
-
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
-
-      environment.pathsToLink = ["/share/zsh"];
-
-      programs.zsh.enable = true;
-
-      homebrew = {
-        enable = true;
-        casks = [
-          "arc"
-          "ghostty"
-          "google-chrome"
-          "hammerspoon"
-          "orbstack"
-          "protonvpn"
-          "slack"
-          "zoom"
-        ];
-      };
-
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 6;
-
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
-    };
-  in
   {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
+    # Personal macbook air
+    # $ darwin-rebuild build --flake .#Edwins-MacBook-Air
     darwinConfigurations."Edwins-MacBook-Air" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules = [ ./edwins-macbook-air.nix ];
+    };
+    # Company macbook pro
+    # Build darwin flake using:
+    # $ darwin-rebuild build --flake .#Edwin-Hermans-Mac
+    darwinConfigurations."Edwin-Hermans-Mac" = self.inputs.nix-darwin.lib.darwinSystem {
+      modules = [ ./edwin-hermans-mac.nix ];
     };
   };
 }
