@@ -206,7 +206,13 @@
     };
     fd.enable = true;
     fzf.enable = true;
-    gh.enable = true;
+    gh = {
+      enable = true;
+      settings.aliases = {
+        mypr = "search prs --author @me --state open";
+      };
+    };
+    gh-dash.enable = true;
     go.enable = true;
     gpg.enable = true;
     lazygit.enable = true;
