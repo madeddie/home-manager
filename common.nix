@@ -116,6 +116,7 @@
       enable = true;
       defaultEditor = true;
       settings.vim = {
+        enableLuaLoader = true;
         viAlias = true;
         vimAlias = true;
         lsp = {
