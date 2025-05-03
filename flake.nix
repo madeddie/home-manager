@@ -25,6 +25,7 @@
       aarch64-linux = home-manager.defaultPackage.aarch64-linux;
       aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
     };
+    # Personal Macbook Air
     homeConfigurations."edwin@Edwins-MacBook-Air.local" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
@@ -37,6 +38,20 @@
         inherit madeddie-nur;
       };
     };
+    # Company Macbook Pro
+    homeConfigurations."Edwin.Hermans@Edwin-Hermans-Mac" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+
+      modules = [
+        nvf.homeManagerModules.default
+        ./common.nix
+        ./home_Edwin.HermansATEdwin-Hermans-Mac.nix
+      ];
+      extraSpecialArgs = {
+        inherit madeddie-nur;
+      };
+    };
+    # Personal Android phone
     homeConfigurations."nix-on-droid" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-linux;
 

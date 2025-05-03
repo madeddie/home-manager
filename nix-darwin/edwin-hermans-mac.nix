@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, self, ... }: {
   environment.systemPackages = [];
 
   # Necessary for using flakes on this system.
@@ -28,5 +28,5 @@
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
-};
+}
 
