@@ -8,6 +8,7 @@
       allowUnfree = true;
     };
   };
+
   home.packages = with pkgs; ([
     bat
     curl
@@ -21,6 +22,7 @@
     todo-txt-cli
     oci-cli
     pwgen
+    ssm-session-manager-plugin
     madeddie-nur.packages.${system}.openhue-cli
   ]);
 
@@ -92,6 +94,9 @@
         ];
         prompt.theme = "paradox";
       };
+    };
+    awscli = {
+      enable = true;
     };
     direnv.enable = true;
     git = {
@@ -220,4 +225,3 @@
   };
 }
 # vim: ft=nix
-

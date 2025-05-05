@@ -1,4 +1,4 @@
-{ pkgs, self, ... }: {
+{ self, ... }: {
   environment.systemPackages = [];
 
   # Necessary for using flakes on this system.
@@ -14,8 +14,10 @@
       "arc"
       "ghostty"
       "hammerspoon"
+      "hiddenbar"
       "orbstack"
       "protonvpn"
+      "sdm"
     ];
   };
 
