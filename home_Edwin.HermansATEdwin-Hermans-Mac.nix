@@ -20,7 +20,7 @@
         font-family = DroidSansM Nerd Font
         font-size = 10
         link-url = true
-        scrollback-limit = 10000
+        scrollback-limit = 100000
         macos-titlebar-style = tabs
         maximize = true
         theme = GruvBoxDark
