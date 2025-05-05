@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   madeddie-nur,
   ...
@@ -7,6 +8,21 @@
     config = {
       allowUnfree = true;
     };
+  };
+
+  sops = {
+    defaultSopsFile = ./secrets/secrets.sops.yaml;
+    age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
+  };
+  sops.secrets.aws_config = {
+    sopsFile = ./secrets/aws_config.sops.ini;
+    path = "${config.home.homeDirectory}/.aws/config";
+    format = "ini";
+  };
+  sops.secrets.aws_credentials = {
+    sopsFile = ./secrets/aws_credentials.sops.ini;
+    path = "${config.home.homeDirectory}/.aws/credentials";
+    format = "ini";
   };
 
   home.packages = with pkgs; ([
@@ -27,6 +43,7 @@
   ]);
 
   home.sessionVariables = {
+    SOPS_AGE_KEY_FILE = "${config.xdg.configHome}/sops/age/keys.txt";
     TODOTXT_CFG_FILE = "/dev/null";
     TODOTXT_DEFAULT_ACTION = "list";
     TODOTXT_DATE_ON_ADD = 1;

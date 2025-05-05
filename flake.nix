@@ -12,6 +12,7 @@
       url = "github:madeddie/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -19,6 +20,7 @@
     home-manager,
     nvf,
     madeddie-nur,
+    sops-nix,
     ...
   }: {
     defaultPackage = {
@@ -31,6 +33,7 @@
 
       modules = [
         nvf.homeManagerModules.default
+        sops-nix.homeManagerModules.sops
         ./common.nix
         ./home_edwinATEdwins-MacBook-Air.local.nix
       ];
@@ -44,6 +47,7 @@
 
       modules = [
         nvf.homeManagerModules.default
+        sops-nix.homeManagerModules.sops
         ./common.nix
         ./home_Edwin.HermansATEdwin-Hermans-Mac.nix
       ];
@@ -57,6 +61,7 @@
 
       modules = [
         nvf.homeManagerModules.default
+        sops-nix.homeManagerModules.sops
         ./common.nix
         ./home_nix-on-droid.nix
       ];
