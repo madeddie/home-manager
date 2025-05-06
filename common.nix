@@ -112,10 +112,6 @@
         prompt.theme = "paradox";
       };
     };
-    awscli = {
-      enable = true;
-    };
-    direnv.enable = true;
     git = {
       enable = true;
       userName = "Edwin Hermans";
@@ -226,14 +222,32 @@
       enable = true;
       enableAlias = true;
     };
-    fd.enable = true;
-    fzf.enable = true;
     gh = {
       enable = true;
       settings.aliases = {
         mypr = "search prs --author @me --state open";
       };
     };
+    tmux = {
+      enable = true;
+      newSession = true;
+      prefix = "C-a";
+      sensibleOnTop = true;
+      shell = "${pkgs.zsh}/bin/zsh";
+      extraConfig = ''
+        set -g default-command ${pkgs.zsh}/bin/zsh
+      '';
+      plugins = with pkgs; [
+        tmuxPlugins.extrakto
+        tmuxPlugins.fingers
+        tmuxPlugins.gruvbox
+        tmuxPlugins.pain-control
+      ];
+    };
+    awscli.enable = true;
+    direnv.enable = true;
+    fd.enable = true;
+    fzf.enable = true;
     gh-dash.enable = true;
     go.enable = true;
     gpg.enable = true;
