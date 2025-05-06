@@ -41,6 +41,17 @@
           alt-k = "focus up";
           alt-l = "focus right";
         };
+        on-window-detected = [
+          {
+            check-further-callbacks = false;
+            "if" = {
+              app-id = "com.mitchellh.ghostty";
+            };
+            run = [
+              "layout tiling"
+            ];
+          }
+        ];
       };
     };
   };
