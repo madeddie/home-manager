@@ -13,6 +13,7 @@
     # $ darwin-rebuild build --flake .#Edwins-MacBook-Air
     darwinConfigurations."Edwins-MacBook-Air" = self.inputs.nix-darwin.lib.darwinSystem {
       modules = [
+        ./common.nix
         ./edwins-macbook-air.nix
       ];
       specialArgs = {inherit self;};
@@ -22,6 +23,7 @@
     # $ darwin-rebuild build --flake .#Edwin-Hermans-Mac
     darwinConfigurations."Edwin-Hermans-Mac" = self.inputs.nix-darwin.lib.darwinSystem {
       modules = [
+        ./common.nix
         ./edwin-hermans-mac.nix
       ];
       specialArgs = {inherit self;};
