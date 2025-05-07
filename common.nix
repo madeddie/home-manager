@@ -35,6 +35,8 @@
     kubectl
     nix-prefetch
     nix-update
+    nh
+    nvd
     todo-txt-cli
     oci-cli
     pwgen
@@ -242,6 +244,7 @@
         tmuxPlugins.fingers
         tmuxPlugins.gruvbox
         tmuxPlugins.pain-control
+        tmuxPlugins.tmux-which-key
       ];
     };
     awscli.enable = true;
