@@ -21,41 +21,6 @@
     ];
   };
 
-  services = {
-    aerospace = {
-      enable = true;
-      settings = {
-        gaps = {
-          inner.horizontal = 0;
-          inner.vertical = 0;
-          outer.left = 0;
-          outer.bottom = 0;
-          outer.top = 0;
-          outer.right = 0;
-        };
-        mode.main.binding = {
-          alt-slash = "layout tiles horizontal vertical";
-          alt-comma = "layout accordion horizontal vertical";
-          alt-h = "focus left";
-          alt-j = "focus down";
-          alt-k = "focus up";
-          alt-l = "focus right";
-        };
-        on-window-detected = [
-          {
-            check-further-callbacks = false;
-            "if" = {
-              app-id = "com.mitchellh.ghostty";
-            };
-            run = [
-              "layout tiling"
-            ];
-          }
-        ];
-      };
-    };
-  };
-
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
 
