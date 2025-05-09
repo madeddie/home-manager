@@ -28,7 +28,7 @@
       aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
     };
     # Personal Macbook Air
-    homeConfigurations."edwin@Edwins-MacBook-Air.local" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."edwin@Edwins-MacBook-Air" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
       modules = [
