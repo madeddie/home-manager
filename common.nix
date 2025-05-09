@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   madeddie-nur,
@@ -49,6 +50,8 @@
     TODOTXT_CFG_FILE = "/dev/null";
     TODOTXT_DEFAULT_ACTION = "list";
     TODOTXT_DATE_ON_ADD = 1;
+    VISUAL = "nvim";
+    EDITOR = "nvim";
   };
 
   home.shellAliases = {
@@ -71,11 +74,6 @@
     };
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-  };
-
   services = {
     gpg-agent = {
       enable = true;
@@ -91,6 +89,9 @@
     home-manager.enable = true;
     zsh = {
       enable = true;
+      initContent = lib.mkOrder 1200 ''
+        . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+      '';
       autosuggestion.enable = true;
       history.size = 100000;
       history.save = 100000;
