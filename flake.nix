@@ -42,7 +42,7 @@
       };
     };
     # Company Macbook Pro
-    homeConfigurations."Edwin.Hermans@Edwin-Hermans-Mac" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."Edwin.Hermans@Edwin-Hermans-10000385" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
       modules = [
