@@ -21,7 +21,7 @@
     # Company macbook pro
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Edwin-Hermans-Mac
-    darwinConfigurations."Edwin-Hermans-Mac" = self.inputs.nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Edwin-Hermans-10000385" = self.inputs.nix-darwin.lib.darwinSystem {
       modules = [
         ./common.nix
         ./edwin-hermans-mac.nix
