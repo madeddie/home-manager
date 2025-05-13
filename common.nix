@@ -124,6 +124,28 @@
         pull.ff = "only";
       };
     };
+    ssh = {
+      enable = true;
+      addKeysToAgent = "confirm";
+      controlMaster = "auto";
+      matchBlocks = {
+        rbg = {
+          host = "rbg rbg.matech.cx";
+          user = "madeddie";
+          hostname = "rbg.madtech.cx";
+          forwardAgent = true;
+        };
+        home = {
+          host = "home home.matech.cx";
+          user = "madeddie";
+          hostname = "home.madtech.cx";
+          forwardAgent = true;
+        };
+      };
+      includes = [
+        "~/.orbstack/ssh/config"
+      ];
+    };
     password-store = {
       enable = true;
       package = pkgs.pass.withExtensions (
