@@ -134,6 +134,38 @@
           user = "madeddie";
           hostname = "rbg.madtech.cx";
           forwardAgent = true;
+          localForwards = [
+            {
+              bind.port = 10004;
+              host.address = "localhost";
+              host.port = 10004;
+            }
+            {
+              bind.port = 10005;
+              host.address = "localhost";
+              host.port = 10005;
+            }
+            {
+              bind.port = 10006;
+              host.address = "localhost";
+              host.port = 10006;
+            }
+            {
+              bind.port = 10010;
+              host.address = "localhost";
+              host.port = 10010;
+            }
+            {
+              bind.port = 10011;
+              host.address = "localhost";
+              host.port = 10011;
+            }
+            {
+              bind.port = 10012;
+              host.address = "localhost";
+              host.port = 10012;
+            }
+          ];
         };
         home = {
           host = "home home.matech.cx";
