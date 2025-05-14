@@ -289,8 +289,10 @@
       enable = true;
       newSession = true;
       prefix = "C-a";
-      sensibleOnTop = true;
+      keyMode = "vi";
+      #sensibleOnTop = true;
       shell = "${pkgs.zsh}/bin/zsh";
+      terminal = "screen-256color";
       extraConfig = ''
         set -g default-command ${pkgs.zsh}/bin/zsh
       '';
