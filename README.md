@@ -27,7 +27,7 @@ These configs can be used to set up my Android terminal and MacOS machines.
         nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
         nix-channel --update
 
-2. `nix run home-manager/master -- --switch`
+2. `nix run home-manager/master -- switch`
 3. `home-manager switch`
 
 ## Other requirements
