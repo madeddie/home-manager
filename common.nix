@@ -30,6 +30,7 @@
     bat
     curl
     devbox
+    google-cloud-sdk
     jq
     k9s
     krew
