@@ -3,6 +3,7 @@
   config,
   pkgs,
   madeddie-nur,
+  simplenote-vim,
   ...
 }: {
   nixpkgs = {
@@ -35,6 +36,7 @@
     k9s
     krew
     kubectl
+    kubeswitch
     nix-prefetch
     nix-update
     nh
@@ -58,6 +60,15 @@
   home.shellAliases = {
     t = "todo.sh";
     ta = "todo.sh add";
+  };
+
+  home.file = {
+    ".zprezto-contrib" = {
+      source = builtins.fetchGit {
+        url = "https://github.com/belak/prezto-contrib.git";
+        rev = "a05508a716cad6e45e90cb8b0f73c811cbd4438a";
+      };
+    };
   };
 
   editorconfig = {
@@ -98,6 +109,7 @@
       history.save = 100000;
       prezto = {
         enable = true;
+        pmoduleDirs = [ "${config.home.homeDirectory}/.zprezto-contrib" ];
         pmodules = [
           "environment"
           "terminal"
@@ -202,7 +214,9 @@
           bash.enable = true;
           go.enable = true;
           lua.enable = true;
-          markdown.enable = true;
+          markdown = {
+            enable = true;
+          };
           nix.enable = true;
           python.enable = true;
         };
@@ -274,6 +288,19 @@
         };
 
         filetree.neo-tree.enable = true;
+
+        # required for simplenote-vim
+        withPython3 = true;
+        python3Packages = [
+          "pynvim"
+          "simplenote"
+        ];
+
+        extraPlugins = {
+          simplenote = {
+            package = pkgs.vimUtils.buildVimPlugin { name = "simplenote-vim"; src = simplenote-vim; };
+          };
+        };
       };
     };
     kubecolor = {

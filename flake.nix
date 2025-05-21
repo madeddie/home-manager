@@ -13,6 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix.url = "github:Mic92/sops-nix";
+    simplenote-vim = {
+      url = "github:simplenote-vim/simplenote.vim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -21,6 +25,7 @@
     nvf,
     madeddie-nur,
     sops-nix,
+    simplenote-vim,
     ...
   }: {
     defaultPackage = {
@@ -39,6 +44,7 @@
       ];
       extraSpecialArgs = {
         inherit madeddie-nur;
+        inherit simplenote-vim;
       };
     };
     # Company Macbook Pro
@@ -53,6 +59,7 @@
       ];
       extraSpecialArgs = {
         inherit madeddie-nur;
+        inherit simplenote-vim;
       };
     };
     # Personal Android phone
@@ -67,6 +74,7 @@
       ];
       extraSpecialArgs = {
         inherit madeddie-nur;
+        inherit simplenote-vim;
       };
     };
   };

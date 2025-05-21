@@ -209,6 +209,7 @@
         "madeddie-nur": "madeddie-nur",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
+        "simplenote-vim": "simplenote-vim",
         "sops-nix": "sops-nix"
       }
     },
@@ -231,6 +232,22 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "simplenote-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744459068,
+        "narHash": "sha256-sainXNjSBCohsYhavnmJ+uUKUXubJtEvj5QmjF1eIzo=",
+        "owner": "simplenote-vim",
+        "repo": "simplenote.vim",
+        "rev": "6e25f4546cc5ef281f27c59b6329a3bdca636652",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simplenote-vim",
+        "repo": "simplenote.vim",
         "type": "github"
       }
     },
