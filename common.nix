@@ -16,6 +16,8 @@
     defaultSopsFile = ./secrets/secrets.sops.yaml;
     age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
   };
+  sops.secrets.simplenote_user = { };
+  sops.secrets.simplenote_pass = { };
   sops.secrets.aws_config = {
     sopsFile = ./secrets/aws_config.sops.ini;
     path = "${config.home.homeDirectory}/.aws/config";
@@ -209,6 +211,11 @@
         vimAlias = true;
         lsp = {
           enable = true;
+        };
+        globals = {
+          # SimplenoteUsername = "${config.sops.secrets.simplenote_user}";
+          # SimplenotePassword = "${config.sops.secrets.simplenote_pass}";
+          SimplenoteFiletype = "markdown";
         };
         languages = {
           bash.enable = true;
