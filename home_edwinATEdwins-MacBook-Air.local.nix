@@ -4,7 +4,7 @@
 }: {
   home.username = "edwin";
   home.homeDirectory = "/Users/edwin";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
 
   home.sessionVariables = {
     TODO_DIR = "$HOME/Documents/notes";
