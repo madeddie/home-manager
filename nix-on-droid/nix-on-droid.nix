@@ -42,6 +42,8 @@
     experimental-features = nix-command flakes
   '';
 
+  build.extraProotOptions = ["--kill-on-exit"];
+
   # Set your time zone
   time.timeZone = "America/New_York";
 
