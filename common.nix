@@ -64,15 +64,6 @@
     ta = "todo.sh add";
   };
 
-  home.file = {
-    ".zprezto-contrib" = {
-      source = builtins.fetchGit {
-        url = "https://github.com/belak/prezto-contrib.git";
-        rev = "a05508a716cad6e45e90cb8b0f73c811cbd4438a";
-      };
-    };
-  };
-
   editorconfig = {
     enable = true;
     settings = {
@@ -103,6 +94,7 @@
     home-manager.enable = true;
     zsh = {
       enable = true;
+      dotDir = ".config/zsh";
       initContent = lib.mkOrder 1200 ''
         . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
       '';
@@ -111,7 +103,7 @@
       history.save = 100000;
       prezto = {
         enable = true;
-        pmoduleDirs = [ "${config.home.homeDirectory}/.zprezto-contrib" ];
+        pmoduleDirs = [ "${config.home.homeDirectory}/.zprezto-prompts" ];
         pmodules = [
           "environment"
           "terminal"
