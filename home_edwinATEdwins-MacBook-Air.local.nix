@@ -216,6 +216,7 @@ automatically-unhide-macos-hidden-apps = false
       profiles.default = {
         extensions = [
           pkgs.vscode-extensions.jdinhlife.gruvbox
+          pkgs.vscode-extensions.platformio.platformio-vscode-ide
         ];
       };
     };
