@@ -204,6 +204,10 @@
         lsp = {
           enable = true;
         };
+        assistant = {
+          codecompanion-nvim.enable = true;
+          copilot.enable = true;
+        };
         globals = {
           # SimplenoteUsername = "${config.sops.secrets.simplenote_user}";
           # SimplenotePassword = "${config.sops.secrets.simplenote_pass}";
