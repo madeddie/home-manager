@@ -50,6 +50,12 @@
     madeddie-nur.packages.${system}.openhue-cli
   ]);
 
+  home.file  = {
+    ".zprezto-prompts" = {
+      source = "./dotfiles/.zprezto-prompts";
+      recursive = true;
+    };
+  };
   home.sessionVariables = {
     SOPS_AGE_KEY_FILE = "${config.xdg.configHome}/sops/age/keys.txt";
     TODOTXT_CFG_FILE = "/dev/null";
@@ -95,9 +101,13 @@
     zsh = {
       enable = true;
       dotDir = ".config/zsh";
-      initContent = lib.mkOrder 1200 ''
-        . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-      '';
+      initContent = let
+        zshConfigEarlyInit = lib.mkOrder 500 "fpath=($HOME/.zprezto-prompts $fpath)";
+        zshConfig = lib.mkOrder 1200 ''
+          . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+        '';
+      in
+        lib.mkMerge [ zshConfigEarlyInit zshConfig ];
       autosuggestion.enable = true;
       history.size = 100000;
       history.save = 100000;
@@ -119,7 +129,7 @@
           "history-substring-search"
           "completion"
         ];
-        prompt.theme = "paradox";
+        prompt.theme = "madeddie";
       };
     };
     git = {
