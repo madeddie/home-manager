@@ -52,7 +52,7 @@
 
   home.file  = {
     ".zprezto-prompts" = {
-      source = "./dotfiles/.zprezto-prompts";
+      source = ./dotfiles/zprezto-prompts;
       recursive = true;
     };
   };
