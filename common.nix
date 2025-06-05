@@ -208,6 +208,14 @@
           codecompanion-nvim.enable = true;
           copilot.enable = true;
         };
+        autocomplete = {
+          nvim-cmp = {
+            enable = true;
+            sourcePlugins = [
+              "codecompanion-nvim"
+            ];
+          };
+        };
         globals = {
           # SimplenoteUsername = "${config.sops.secrets.simplenote_user}";
           # SimplenotePassword = "${config.sops.secrets.simplenote_pass}";

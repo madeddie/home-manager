@@ -12,7 +12,7 @@ These configs can be used to set up my Android terminal and MacOS machines.
 4. `nix run nix-darwin/master#darwin-rebuild -- switch`
 5. `darwin-rebuild switch`
 
-## Steps to initiailze on Android
+## Steps to initialize on Android
 
 1. Install the termux forked UI https://f-droid.org/en/packages/com.termux.nix
 2. `nix run nixpkgs\#git -- clone git@github.com:madeddie/home-manager.git ~/.config/home-manager`
