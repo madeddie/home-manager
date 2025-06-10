@@ -41,6 +41,7 @@
     kubeswitch
     nix-prefetch
     nix-update
+    nixpkgs-review
     nh
     nvd
     todo-txt-cli
