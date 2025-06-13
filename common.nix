@@ -219,6 +219,7 @@
           codecompanion-nvim.enable = true;
           copilot.enable = true;
         };
+        diagnostics.enable = true;
         autocomplete = {
           nvim-cmp = {
             enable = true;
