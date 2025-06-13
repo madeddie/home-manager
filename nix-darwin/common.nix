@@ -15,6 +15,7 @@
       "ghostty"
       "hammerspoon"
       "hiddenbar"
+      "menubarx"
       "orbstack"
       "protonvpn"
       "sdm"
