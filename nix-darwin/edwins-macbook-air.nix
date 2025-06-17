@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   system.primaryUser = "edwin";
 
   homebrew = {
@@ -7,6 +7,9 @@
       "slack"
       "zoom"
     ];
+    mas = {
+      "Apple Configurator" = 1037126344;
+    };
   };
 }
 
