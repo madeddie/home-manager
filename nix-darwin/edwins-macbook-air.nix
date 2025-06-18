@@ -2,13 +2,16 @@
   system.primaryUser = "edwin";
 
   homebrew = {
+    brews = [
+      "mas"
+    ];
     casks = [
       "google-chrome"
       "slack"
       "zoom"
     ];
-    mas = {
-      "Apple Configurator" = 1037126344;
+    masApps = {
+      "Apple Configurator" = 1588794674;
     };
   };
 }
