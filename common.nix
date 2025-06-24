@@ -48,7 +48,7 @@
     oci-cli
     pwgen
     ssm-session-manager-plugin
-    madeddie-nur.packages.${system}.openhue-cli
+    openhue-cli
   ]);
 
   home.file  = {
