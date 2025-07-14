@@ -16,6 +16,8 @@
       "hammerspoon"
       "hiddenbar"
       "menubarx"
+      "minecraft"
+      "nvidia-geforce-now"
       "orbstack"
       "protonvpn"
       "sdm"
