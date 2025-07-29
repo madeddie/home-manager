@@ -10,6 +10,7 @@
 
   homebrew = {
     enable = true;
+    greedyCasks = true;
     casks = [
       "arc"
       "ghostty"
