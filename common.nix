@@ -101,7 +101,7 @@
     home-manager.enable = true;
     zsh = {
       enable = true;
-      dotDir = ".config/zsh";
+      dotDir = "${config.xdg.configHome}/zsh";
       initContent = let
         zshConfigEarlyInit = lib.mkOrder 500 "fpath=($HOME/.zprezto-prompts $fpath)";
         zshConfig = lib.mkOrder 1200 ''
@@ -144,9 +144,13 @@
     };
     ssh = {
       enable = true;
-      addKeysToAgent = "confirm";
-      controlMaster = "auto";
+      enableDefaultConfig = false;
       matchBlocks = {
+        "*" = {
+          controlMaster = "auto";
+          controlPath = "~/.ssh/master-%r@%n:%p";
+          addKeysToAgent = "confirm";
+        };
         rbg = {
           host = "rbg rbg.matech.cx";
           user = "madeddie";
