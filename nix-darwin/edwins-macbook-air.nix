@@ -7,6 +7,9 @@
     ];
     casks = [
       "google-chrome"
+      "minecraft"
+      "moonlight"
+      "nvidia-gforce-now"
       "slack"
       "zoom"
     ];
