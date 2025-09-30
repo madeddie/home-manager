@@ -20,7 +20,7 @@ link-url = true
 scrollback-limit = 100000
 macos-titlebar-style = tabs
 maximize = true
-theme = GruvBoxDark
+theme = GruvBox Dark
 window-height = 500
 window-width = 500
   '';
