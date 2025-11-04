@@ -21,7 +21,6 @@
       "nvidia-geforce-now"
       "orbstack"
       "protonvpn"
-      "sdm"
     ];
   };
 

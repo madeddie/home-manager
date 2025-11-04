@@ -4,6 +4,7 @@
   homebrew = {
     brews = [
       "mas"
+      "porter-dev/porter/porter"
     ];
     casks = [
       "google-chrome"

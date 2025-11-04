@@ -47,21 +47,6 @@
         inherit simplenote-vim;
       };
     };
-    # Company Macbook Pro
-    homeConfigurations."Edwin.Hermans@Edwin-Hermans-10000385" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-
-      modules = [
-        nvf.homeManagerModules.default
-        sops-nix.homeManagerModules.sops
-        ./common.nix
-        ./home_Edwin.HermansATEdwin-Hermans-Mac.nix
-      ];
-      extraSpecialArgs = {
-        inherit madeddie-nur;
-        inherit simplenote-vim;
-      };
-    };
     # Personal Android phone
     homeConfigurations."nix-on-droid" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-linux;
