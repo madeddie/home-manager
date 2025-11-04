@@ -11,14 +11,13 @@
   homebrew = {
     enable = true;
     greedyCasks = true;
+    onActivation.cleanup = "zap";
     casks = [
       "arc"
       "ghostty"
       "hammerspoon"
       "hiddenbar"
       "menubarx"
-      "minecraft"
-      "nvidia-geforce-now"
       "orbstack"
       "protonvpn"
     ];
