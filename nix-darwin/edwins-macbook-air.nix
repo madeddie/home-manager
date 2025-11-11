@@ -10,7 +10,7 @@
       "google-chrome"
       "minecraft"
       "moonlight"
-      "nvidia-gforce-now"
+      "nvidia-geforce-now"
       "slack"
       "zoom"
     ];
