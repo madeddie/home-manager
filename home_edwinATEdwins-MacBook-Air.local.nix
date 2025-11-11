@@ -243,6 +243,9 @@ automatically-unhide-macos-hidden-apps = false
         };
       };
     };
+    claude-code = {
+      enable = true;
+    };
   };
 
   fonts = {
