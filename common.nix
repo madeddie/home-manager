@@ -135,9 +135,9 @@
     };
     git = {
       enable = true;
-      userName = "Edwin Hermans";
-      userEmail = "edwin@madtech.cx";
-      extraConfig = {
+      settings = {
+        user.name = "Edwin Hermans";
+        user.email = "edwin@madtech.cx";
         fetch.prune = true;
         pull.ff = "only";
       };
