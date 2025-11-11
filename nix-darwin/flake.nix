@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -15,16 +15,6 @@
       modules = [
         ./common.nix
         ./edwins-macbook-air.nix
-      ];
-      specialArgs = {inherit self;};
-    };
-    # Company macbook pro
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Edwin-Hermans-Mac
-    darwinConfigurations."Edwin-Hermans-10000385" = self.inputs.nix-darwin.lib.darwinSystem {
-      modules = [
-        ./common.nix
-        ./edwin-hermans-mac.nix
       ];
       specialArgs = {inherit self;};
     };
