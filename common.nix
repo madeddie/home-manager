@@ -368,6 +368,7 @@
     gpg.enable = true;
     lazygit.enable = true;
     ripgrep.enable = true;
+    claude-code.enable = true;
   };
 }
 # vim: ft=nix

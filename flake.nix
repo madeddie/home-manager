@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:notashelf/nvf";
+    nvf.url = "github:notashelf/nvf/v0.8";
     madeddie-nur = {
       url = "github:madeddie/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
