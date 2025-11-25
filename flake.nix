@@ -31,6 +31,7 @@
     defaultPackage = {
       aarch64-linux = home-manager.defaultPackage.aarch64-linux;
       aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
+      x86_64-linux = home-manager.defaultPackage.x86_64-linux;
     };
     # Personal Macbook Air
     homeConfigurations."edwin@Edwins-MacBook-Air" = home-manager.lib.homeManagerConfiguration {
@@ -56,6 +57,21 @@
         sops-nix.homeManagerModules.sops
         ./common.nix
         ./home_nix-on-droid.nix
+      ];
+      extraSpecialArgs = {
+        inherit madeddie-nur;
+        inherit simplenote-vim;
+      };
+    };
+    # home.madtech.cx
+    homeConfigurations."madeddie@maddock" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+      modules = [
+        nvf.homeManagerModules.default
+        sops-nix.homeManagerModules.sops
+        ./common.nix
+        ./home_madeddieATmaddock.nix
       ];
       extraSpecialArgs = {
         inherit madeddie-nur;
