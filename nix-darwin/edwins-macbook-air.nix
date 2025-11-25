@@ -7,11 +7,13 @@
       "porter-dev/porter/porter"
     ];
     casks = [
+      "1password"
       "google-chrome"
       "minecraft"
       "moonlight"
       "nvidia-geforce-now"
       "slack"
+      "tailscale"
       "zoom"
     ];
     masApps = {

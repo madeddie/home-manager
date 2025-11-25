@@ -38,6 +38,7 @@
     k9s
     krew
     kubectl
+    kubernetes-helm
     kubeswitch
     nix-prefetch
     nix-update
@@ -54,6 +55,10 @@
   home.file  = {
     ".zprezto-prompts" = {
       source = ./dotfiles/zprezto-prompts;
+      recursive = true;
+    };
+    ".porter" = {
+      source = ./dotfiles/porter;
       recursive = true;
     };
   };
@@ -106,6 +111,7 @@
         zshConfigEarlyInit = lib.mkOrder 500 "fpath=($HOME/.zprezto-prompts $fpath)";
         zshConfig = lib.mkOrder 1200 ''
           . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+          . $HOME/.porter/aliases.zsh
         '';
       in
         lib.mkMerge [ zshConfigEarlyInit zshConfig ];
