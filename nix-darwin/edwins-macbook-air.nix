@@ -13,7 +13,7 @@
       "moonlight"
       "nvidia-geforce-now"
       "slack"
-      "tailscale"
+      "tailscale-app"
       "zoom"
     ];
     masApps = {
