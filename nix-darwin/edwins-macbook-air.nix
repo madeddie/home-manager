@@ -4,7 +4,6 @@
   homebrew = {
     brews = [
       "mas"
-      "porter-dev/porter/porter"
     ];
     casks = [
       "1password"
