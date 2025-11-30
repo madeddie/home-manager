@@ -30,6 +30,7 @@
   };
 
   home.packages = with pkgs; ([
+    age
     bat
     curl
     devbox
