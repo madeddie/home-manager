@@ -50,6 +50,8 @@
     pwgen
     ssm-session-manager-plugin
     openhue-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
   ]);
 
   home.file  = {
