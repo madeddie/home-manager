@@ -11,6 +11,10 @@ pctx () {
   porter config
 }
 
+awsexport () {
+  eval $(ccp-cli manage cloud aws --project-id $1 --aws-account-id $2 -- configure export-credentials --format=env)
+}
+
 alias k=kubectl
 alias pk="porter kubectl --"
 alias ph="porter helm --"
