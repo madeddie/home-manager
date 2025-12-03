@@ -15,6 +15,14 @@ awsexport () {
   eval $(ccp-cli manage cloud aws --project-id $1 --aws-account-id $2 -- configure export-credentials --format=env)
 }
 
+function pllc {
+  host=$(porter config | grep host | cut -d' ' -f2)
+  token=$(porter config | grep token | cut -d' ' -f2)
+  project="$1"
+  project="${1:-$(porter config | grep project | cut -d' ' -f2)}"
+  curl -s -H "Authorization: Bearer ${token}" "${host}/api/projects/${project}/clusters"
+}
+
 alias k=kubectl
 alias pk="porter kubectl --"
 alias ph="porter helm --"
