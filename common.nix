@@ -52,6 +52,7 @@
     sops
     ssm-session-manager-plugin
     todo-txt-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
     madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
     madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
   ]);
