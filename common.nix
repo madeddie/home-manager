@@ -31,12 +31,12 @@
 
   home.packages = with pkgs; ([
     age
+    argocd
     bat
     curl
     devbox
     google-cloud-sdk
     jq
-    k9s
     krew
     kubectl
     kubernetes-helm
@@ -65,6 +65,11 @@
       source = ./dotfiles/porter;
       recursive = true;
     };
+    "${config.home.homeDirectory}/Library/Application Support/k9s/plugins" = {
+      source = ./dotfiles/k9s-plugins;
+      recursive = true;
+    };
+
   };
   home.sessionVariables = {
     SOPS_AGE_KEY_FILE = "${config.xdg.configHome}/sops/age/keys.txt";
@@ -379,6 +384,7 @@
     lazygit.enable = true;
     ripgrep.enable = true;
     claude-code.enable = true;
+    k9s.enable = true;
   };
 }
 # vim: ft=nix
