@@ -44,6 +44,7 @@
     nix-prefetch
     nix-update
     nixpkgs-review
+    nix-zsh-completions
     nh
     nvd
     oci-cli
@@ -52,6 +53,7 @@
     sops
     ssm-session-manager-plugin
     todo-txt-cli
+    zsh-completions
     madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
     madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
     madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
@@ -66,11 +68,14 @@
       source = ./dotfiles/porter;
       recursive = true;
     };
-    "${config.home.homeDirectory}/Library/Application Support/k9s/plugins" = {
+    "Library/Application Support/k9s/plugins" = {
       source = ./dotfiles/k9s-plugins;
       recursive = true;
     };
-
+    "${config.xdg.configHome}/zsh/completions" = {
+      source = ./dotfiles/zsh_completions;
+      recursive = true;
+    };
   };
   home.sessionVariables = {
     SOPS_AGE_KEY_FILE = "${config.xdg.configHome}/sops/age/keys.txt";
@@ -116,12 +121,14 @@
     home-manager.enable = true;
     zsh = {
       enable = true;
+      enableCompletion = true;
       dotDir = "${config.xdg.configHome}/zsh";
       initContent = let
         zshConfigEarlyInit = lib.mkOrder 500 "fpath=($HOME/.zprezto-prompts $fpath)";
         zshConfig = lib.mkOrder 1200 ''
           . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
           . $HOME/.porter/aliases.zsh
+          complete -C ${pkgs.awscli2}/bin/aws_completer aws
         '';
       in
         lib.mkMerge [ zshConfigEarlyInit zshConfig ];
