@@ -31,20 +31,23 @@
 
   home.packages = with pkgs; ([
     age
+    azure-cli
     argocd
     bat
     curl
     devbox
     google-cloud-sdk
+    ipcalc
     jq
     krew
     kubectl
     kubernetes-helm
     kubeswitch
     nix-prefetch
+    nix-search-cli
     nix-update
-    nixpkgs-review
     nix-zsh-completions
+    nixpkgs-review
     nh
     nvd
     oci-cli
