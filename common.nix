@@ -158,6 +158,9 @@
         ];
         prompt.theme = "madeddie";
       };
+      sessionVariables = {
+        PATH = "$PATH:$HOME/.krew/bin";
+      };
     };
     git = {
       enable = true;
