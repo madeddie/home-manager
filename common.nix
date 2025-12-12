@@ -35,26 +35,21 @@
     argocd
     bat
     curl
-    devbox
-    google-cloud-sdk
     ipcalc
     jq
     krew
     kubectl
     kubernetes-helm
-    kubeswitch
     nix-prefetch
     nix-search-cli
     nix-update
     nix-zsh-completions
-    nixpkgs-review
     nh
     nvd
     oci-cli
     openhue-cli
     pwgen
     sops
-    ssm-session-manager-plugin
     todo-txt-cli
     zsh-completions
     madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
@@ -399,6 +394,7 @@
     ripgrep.enable = true;
     claude-code.enable = true;
     k9s.enable = true;
+    kubeswitch.enable = true;
   };
 }
 # vim: ft=nix

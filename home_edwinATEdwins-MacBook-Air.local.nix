@@ -12,7 +12,12 @@
 
   home.packages = with pkgs; ([
     aerospace
+    devbox
+    google-cloud-sdk
     nerd-fonts.droid-sans-mono
+    nixpkgs-review
+    postgresql
+    ssm-session-manager-plugin
     wireguard-go
     wireguard-tools
   ]);
