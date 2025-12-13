@@ -70,7 +70,8 @@ function prompt_madeddie_build_prompt {
     prompt_madeddie_start_segment white black '${(e)python_info[virtualenv]}'
   fi
 
-  prompt_madeddie_start_segment blue black "pctx: $(porter config | grep project | cut -d' ' -f2)"
+  # 172 = orange
+  prompt_madeddie_start_segment 172 black "pctx: $(porter config | grep project | cut -d' ' -f2)"
 
   # prompt_madeddie_start_segment green black "aws: " prompt_madeddie_aws
 
