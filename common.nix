@@ -125,6 +125,7 @@
         zshConfig = lib.mkOrder 1200 ''
           . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
           . $HOME/.porter/aliases.zsh
+          autoload bashcompinit && bashcompinit
           complete -C ${pkgs.awscli2}/bin/aws_completer aws
         '';
       in
