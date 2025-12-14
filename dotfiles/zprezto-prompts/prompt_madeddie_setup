@@ -71,7 +71,9 @@ function prompt_madeddie_build_prompt {
   fi
 
   # 172 = orange
-  prompt_madeddie_start_segment 172 black "pctx: $(porter config | grep project | cut -d' ' -f2)"
+  if [[ -n "$PCTX" ]]; then
+    prompt_madeddie_start_segment 172 black "pctx: $(porter config | grep project | cut -d' ' -f2)"
+  if
 
   # prompt_madeddie_start_segment green black "aws: " prompt_madeddie_aws
 
