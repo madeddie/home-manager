@@ -16,6 +16,12 @@
       pinentry.package = pkgs.pinentry-curses;
     };
   };
+  home.file = {
+    "bin" = {
+      source = ./dotfiles/nix-on-droid_bin;
+      recursive = true;
+    };
+  };
 }
 # vim: ft=nix
 

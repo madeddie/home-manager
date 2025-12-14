@@ -31,7 +31,6 @@
 
   home.packages = with pkgs; ([
     age
-    azure-cli
     argocd
     bat
     curl

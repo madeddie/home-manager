@@ -12,6 +12,7 @@
 
   home.packages = with pkgs; ([
     aerospace
+    azure-cli
     devbox
     google-cloud-sdk
     nerd-fonts.droid-sans-mono

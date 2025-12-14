@@ -1,0 +1,3 @@
+#/data/data/com.termux.nix/files/home/.nix-profile/bin/env bash
+
+/android/system/bin/linker64 /android/system/bin/ping $@

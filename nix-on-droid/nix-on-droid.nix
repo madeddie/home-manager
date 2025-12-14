@@ -31,6 +31,7 @@
   #environment.pathsToLink = [ "/share/bash-completion" ];
 
   environment.etc."resolv.conf".text = lib.mkForce ''
+    # nameserver 1.1.1.1
     nameserver 192.168.0.1
   '';
 
