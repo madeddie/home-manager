@@ -24,7 +24,7 @@ These configs can be used to set up my Android terminal and MacOS machines.
         nix shell nixpkgs\#git nixpkgs\#openssh
         git clone git@github.com:madeddie/home-manager.git ~/.config/home-manager
         rm -rf ~/.config/nix-on-droid
-        ln -s $(pwd)/nix-on-droid ~/.config/nix-on-droid
+        ln -s ~/.config/home-manager/nix-on-droid ~/.config/nix-on-droid
         nix-on-droid switch --flake ~/.config/nix-on-droid
 
 ## Steps to initialize Home Manager
