@@ -1,3 +1,5 @@
+export NATS_URL=http://nats.porter.run:4222
+
 pctx () {
   # pctx with no args will print all contexts that are available
   # otherwise, use `pctx myctx` to create a new context, or switch to an existing one
