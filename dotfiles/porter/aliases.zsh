@@ -54,7 +54,7 @@ alias pin-there="pin --host=https://dashboard.porter.run"
 alias backup-fig="cp -i ~/.aws/config_backup ~/.aws/config"
 alias gpo="git pull origin"
 alias gba='for k in `git branch|sed s/^..//`;do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"`\\t"$k";done|sort'
-alias pk9s="porter kubectl --print-kubeconfig >! /tmp/temp-kubeconfig &&  k9s --kubeconfig /tmp/temp-kubeconfig"
+alias pk9s="porter kubectl --print-kubeconfig >! /tmp/temp-kubeconfig && KUBECONFIG=/tmp/temp-kubeconfig k9s"
 
 alias gm="goose -dir zarf/database/migrations"
 alias plint="GOWORK=off golangci-lint run -c ../.github/golangci-lint.yaml --new-from-rev=origin/main"
