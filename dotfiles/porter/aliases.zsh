@@ -14,7 +14,16 @@ pctx () {
 }
 
 awsexport () {
-  eval $(ccp-cli manage cloud aws --project-id $1 --aws-account-id $2 -- configure export-credentials --format=env)
+  if [[ -z $1 ]]; then
+    echo "Missing project id"
+    return
+  fi
+  local cmd="ccp-cli manage cloud aws --project-id $1"
+  if [[ -n "$2" ]]; then
+    cmd+=" --aws-account-id $2"
+  fi
+  cmd+=" -- configure export-credentials --format=env"
+  eval $($=cmd)
 }
 
 function pllc {
