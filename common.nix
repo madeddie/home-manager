@@ -32,6 +32,7 @@
   home.packages = with pkgs; ([
     age
     argocd
+    argo-rollouts
     bat
     curl
     ipcalc
