@@ -34,6 +34,28 @@ function pllc {
   curl -s -H "Authorization: Bearer ${token}" "${host}/api/projects/${project}/clusters"
 }
 
+function plookup {
+  api_url="https://api.usepylon.com/accounts/search"
+  if [[ -z $1 ]]; then
+    echo "Missing account name"
+    return
+  fi
+
+  if [[ "$1" =~ ^[0-9]+$ ]]; then
+    local ticketnum=1
+  fi
+
+  lookup_json="$(echo '{
+    "filter": {
+      "field": "name",
+      "operator": "string_contains",
+      "value": "customer"
+    }
+  }' | jq -r --arg name_value "$1" '.filter.value = $name_value')"
+
+  curl -s -H "Authorization: Bearer $(op item get api.usepylon.com --fields credential --reveal)" $api_url -d "$lookup_json" | jq -r '.data[] | "\(.name): \(.custom_fields.account_project_id.value)"'
+}
+
 alias k=kubectl
 alias pk="porter kubectl --"
 alias ph="porter helm --"
