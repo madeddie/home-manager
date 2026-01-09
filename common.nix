@@ -54,9 +54,6 @@
     todo-txt-cli
     wget
     zsh-completions
-    madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
-    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
-    madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
   ]);
 
   home.file  = {

@@ -11,6 +11,12 @@
     TODO_DIR = "$HOME/storage/documents/markor";
   };
 
+  home.packages = with pkgs; ([
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
+  ]);
+
   services = {
     gpg-agent = {
       pinentry.package = pkgs.pinentry-curses;

@@ -21,6 +21,9 @@
     ssm-session-manager-plugin
     wireguard-go
     wireguard-tools
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
   ]);
 
   xdg.configFile."ghostty/config".text = ''
