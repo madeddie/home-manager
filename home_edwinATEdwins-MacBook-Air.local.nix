@@ -1,5 +1,6 @@
 {
   pkgs,
+  madeddie-nur,
   ...
 }: {
   home.username = "edwin";

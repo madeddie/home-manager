@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  madeddie-nur
   ...
 }: {
   home.username = "nix-on-droid";
