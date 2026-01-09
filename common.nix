@@ -35,6 +35,7 @@
     argo-rollouts
     bat
     curl
+    eksctl
     ipcalc
     jq
     krew
