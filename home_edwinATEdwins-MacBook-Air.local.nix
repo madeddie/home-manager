@@ -23,9 +23,11 @@
     wireguard-go
     wireguard-tools
     madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
-    madeddie-nur.packages.${stdenv.hostPlatform.system}.docker-credential-porter
-    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
     madeddie-nur.packages.${stdenv.hostPlatform.system}.ccp-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.docker-credential-porter
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.k8s-resource-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.porter-cli
+    madeddie-nur.packages.${stdenv.hostPlatform.system}.sncli
   ]);
 
   xdg.configFile."ghostty/config".text = ''
