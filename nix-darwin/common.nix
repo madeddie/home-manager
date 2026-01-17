@@ -20,6 +20,7 @@
       "menubarx"
       "orbstack"
       "protonvpn"
+      "syncthing"
     ];
   };
 
