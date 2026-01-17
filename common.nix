@@ -267,6 +267,9 @@
           lua.enable = true;
           markdown = {
             enable = true;
+            extensions = {
+              render-markdown-nvim.enable = true;
+            };
           };
           nix.enable = true;
           python.enable = true;
