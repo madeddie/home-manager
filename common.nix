@@ -279,14 +279,11 @@
           completion.enable = true;
           icons.enable = true;
           snippets.enable = true;
+          surround.enable = true;
         };
         utility = {
           diffview-nvim.enable = true;
           snacks-nvim.enable = true;
-          surround = {
-            enable = true;
-            useVendoredKeybindings = false;
-          };
         };
         visuals = {
           nvim-web-devicons.enable = true;
