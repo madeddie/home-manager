@@ -378,6 +378,7 @@
       terminal = "screen-256color";
       extraConfig = ''
         set -g default-command ${pkgs.zsh}/bin/zsh
+        bind -N "Send the prefix key through to the application" C-a send-prefix
       '';
       plugins = with pkgs; [
         tmuxPlugins.extrakto
