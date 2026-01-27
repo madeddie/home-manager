@@ -14,6 +14,7 @@
       "moonlight"
       "nvidia-geforce-now"
       "obs"
+      "raspberry-pi-imager"
       "slack"
       "tailscale-app"
       "zoom"
