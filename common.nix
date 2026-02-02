@@ -382,7 +382,7 @@
       '';
       plugins = with pkgs; [
         tmuxPlugins.extrakto
-        tmuxPlugins.fingers
+        # tmuxPlugins.fingers
         tmuxPlugins.gruvbox
         tmuxPlugins.pain-control
         tmuxPlugins.tmux-which-key
