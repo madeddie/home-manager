@@ -10,7 +10,7 @@
     killall
     diffutils
     findutils
-    utillinux
+    util-linux
     tzdata
     hostname
     #man
