@@ -17,10 +17,12 @@
       "ghostty"
       "hammerspoon"
       "hiddenbar"
+      "linphone"
       "menubarx"
       "orbstack"
       "protonvpn"
       "syncthing-app"
+      "vlc"
     ];
   };
 
