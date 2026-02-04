@@ -269,12 +269,12 @@
           bash.enable = true;
           go.enable = true;
           lua.enable = true;
-          # markdown = {
-          #   enable = true;
-          #   # extensions = {
-          #   #   render-markdown-nvim.enable = true;
-          #   # };
-          # };
+          markdown = {
+            enable = true;
+            extensions = {
+              markview-nvim.enable = true;
+            };
+          };
           nix.enable = true;
           python.enable = true;
         };
@@ -373,7 +373,6 @@
       newSession = true;
       prefix = "C-a";
       keyMode = "vi";
-      #sensibleOnTop = true;
       shell = "${pkgs.zsh}/bin/zsh";
       terminal = "screen-256color";
       extraConfig = ''
@@ -382,7 +381,6 @@
       '';
       plugins = with pkgs; [
         tmuxPlugins.extrakto
-        # tmuxPlugins.fingers
         tmuxPlugins.gruvbox
         tmuxPlugins.pain-control
         tmuxPlugins.tmux-which-key

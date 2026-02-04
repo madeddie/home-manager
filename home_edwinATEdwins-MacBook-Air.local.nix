@@ -19,7 +19,7 @@
     nerd-fonts.droid-sans-mono
     nixpkgs-review
     postgresql
-    # ssm-session-manager-plugin
+    ssm-session-manager-plugin
     wireguard-go
     wireguard-tools
     madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
