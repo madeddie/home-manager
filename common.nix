@@ -81,6 +81,7 @@
     TODOTXT_DATE_ON_ADD = 1;
     VISUAL = "nvim";
     EDITOR = "nvim";
+    K9S_FEATURE_GATE_NODE_SHELL = "true";
   };
 
   home.shellAliases = {

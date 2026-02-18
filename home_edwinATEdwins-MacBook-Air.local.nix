@@ -13,7 +13,7 @@
 
   home.packages = with pkgs; ([
     aerospace
-    azure-cli
+    (azure-cli.withExtensions [ azure-cli.extensions.account ])
     devbox
     google-cloud-sdk
     nerd-fonts.droid-sans-mono
