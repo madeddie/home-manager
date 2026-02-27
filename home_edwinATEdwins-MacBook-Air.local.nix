@@ -16,10 +16,12 @@
     (azure-cli.withExtensions [ azure-cli.extensions.account ])
     devbox
     google-cloud-sdk
+    kcl
     nerd-fonts.droid-sans-mono
     nixpkgs-review
     postgresql
     ssm-session-manager-plugin
+    uv
     wireguard-go
     wireguard-tools
     madeddie-nur.packages.${stdenv.hostPlatform.system}.aws-console
