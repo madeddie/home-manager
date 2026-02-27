@@ -19,9 +19,6 @@
       "tailscale-app"
       "zoom"
     ];
-    masApps = {
-      "Apple Configurator" = 1588794674;
-    };
   };
 }
 
