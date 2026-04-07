@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Simply install just the packages
@@ -31,8 +36,7 @@
   #environment.pathsToLink = [ "/share/bash-completion" ];
 
   environment.etc."resolv.conf".text = lib.mkForce ''
-    # nameserver 1.1.1.1
-    nameserver 192.168.0.1
+    nameserver 1.1.1.1
   '';
 
   # Read the changelog before changing this value
