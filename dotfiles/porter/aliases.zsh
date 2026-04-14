@@ -25,10 +25,9 @@ eval $(ccp-cli manage cloud aws --project-id $1 ${(z)aws_account} -- configure e
 }
 
 function pllc {
-  PORTER_CONFIG=~/.porter/default/porter.yaml
-  host=$(PORTER_CONFIG=$PORTER_CONFIG porter config | grep host | cut -d' ' -f2)
-  token=$(PORTER_CONFIG=$PORTER_CONFIG porter config | grep token | cut -d' ' -f2)
-  project="$1"
+  PORTERCONFIG=~/.porter/default/porter.yaml
+  host=$(PORTER_CONFIG=$PORTERCONFIG porter config | grep host | cut -d' ' -f2)
+  token=$(PORTER_CONFIG=$PORTERCONFIG porter config --show-token | grep token | cut -d' ' -f2)
   project="${1:-$(porter config | grep project | cut -d' ' -f2)}"
   json=$(curl -s -H "Authorization: Bearer ${token}" "${host}/api/projects/${project}/clusters")
   echo "$json" | jq
