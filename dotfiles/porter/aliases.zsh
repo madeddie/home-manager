@@ -25,11 +25,11 @@ eval $(ccp-cli manage cloud aws --project-id $1 ${(z)aws_account} -- configure e
 }
 
 function pllc {
-  PORTERCONFIG=~/.porter/default/porter.yaml
-  host=$(PORTER_CONFIG=$PORTERCONFIG porter config | grep host | cut -d' ' -f2)
-  token=$(PORTER_CONFIG=$PORTERCONFIG porter config --show-token | grep token | cut -d' ' -f2)
-  project="${1:-$(porter config | grep project | cut -d' ' -f2)}"
-  json=$(curl -s -H "Authorization: Bearer ${token}" "${host}/api/projects/${project}/clusters")
+  local PORTERCONFIG=~/.porter/default/porter.yaml
+  local host=$(PORTER_CONFIG=$PORTERCONFIG porter config | grep host | cut -d' ' -f2)
+  local token=$(PORTER_CONFIG=$PORTERCONFIG porter config --show-token | grep token | cut -d' ' -f2)
+  local project="${1:-$(porter config | grep project | cut -d' ' -f2)}"
+  local json=$(curl -s -H "Authorization: Bearer ${token}" "${host}/api/projects/${project}/clusters")
   echo "$json" | jq
 }
 
@@ -97,3 +97,12 @@ alias pkc="porter kubectl --print-kubeconfig >! /tmp/temp-kubeconfig && KUBECONF
 
 alias gm="goose -dir zarf/database/migrations"
 alias plint="GOWORK=off golangci-lint run -c ../.github/golangci-lint.yaml --new-from-rev=origin/main"
+
+# porter db config
+export PGUSER="op://Shared/Engineering RW Role - Production Database/username"
+export PGPASSWORD="op://Shared/Engineering RW Role - Production Database/password"
+export PGHOST="op://Shared/Engineering RW Role - Production Database/host"
+export PGDATABASE="op://Shared/Engineering RW Role - Production Database/database"
+export PGSSLMODE=require
+
+alias porterdb="op run --no-masking -- psql"

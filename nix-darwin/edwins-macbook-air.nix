@@ -14,6 +14,8 @@
       "moonlight"
       "nvidia-geforce-now"
       "obs"
+      "ollama-app"
+      "opencode-desktop"
       "raspberry-pi-imager"
       "slack"
       "tailscale-app"
