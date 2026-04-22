@@ -87,6 +87,8 @@
   home.shellAliases = {
     t = "todo.sh";
     ta = "todo.sh add";
+    wgup = "sudo wg-quick up wg-home";
+    wgdown = "sudo wg-quick down wg-home";
   };
 
   editorconfig = {
