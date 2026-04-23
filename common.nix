@@ -28,6 +28,11 @@
     path = "${config.home.homeDirectory}/.aws/credentials";
     format = "ini";
   };
+  sops.secrets.porter_ssh_config = {
+    sopsFile = ./dotfiles/porter/ssh_config.enc;
+    path = "${config.home.homeDirectory}/.porter/ssh_config";
+    format = "binary";
+  };
 
   home.packages = with pkgs; ([
     age
