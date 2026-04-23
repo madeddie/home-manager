@@ -231,11 +231,6 @@
           hostname = "home.madtech.cx";
           forwardAgent = true;
         };
-        gitea = {
-          host = "gitea.porter.run";
-          user = "git";
-          port = 2222;
-        };
       };
       includes = [
         "~/.orbstack/ssh/config"
