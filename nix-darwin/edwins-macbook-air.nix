@@ -4,6 +4,7 @@
   homebrew = {
     brews = [
       "mas"
+      "porter-dev/porter/porter"
     ];
     casks = [
       "1password"
@@ -20,6 +21,9 @@
       "slack"
       "tailscale-app"
       "zoom"
+    ];
+    taps = [
+      "porter-dev/porter"
     ];
   };
 }
