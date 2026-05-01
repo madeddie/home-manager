@@ -13,11 +13,9 @@
     greedyCasks = true;
     onActivation.cleanup = "zap";
     casks = [
-      "arc"
       "ghostty"
       "hammerspoon"
       "hiddenbar"
-      "linphone"
       "menubarx"
       "orbstack"
       "protonvpn"
