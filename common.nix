@@ -94,6 +94,7 @@
     ta = "todo.sh add";
     wgup = "sudo wg-quick up wg-home";
     wgdown = "sudo wg-quick down wg-home";
+    togglewg = "if [ -z \"$(wg show interfaces)\" ]; then wgup; else wgdown; networksetup -setdnsservers \"Wi-Fi\" \"Empty\"; fi";
   };
 
   editorconfig = {
