@@ -182,55 +182,21 @@
     ssh = {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
-        "*" = {
-          controlMaster = "auto";
-          controlPath = "~/.ssh/master-%r@%n:%p";
-          addKeysToAgent = "confirm";
+      settings = {
+        "Host *" = {
+          ControlMaster = "auto";
+          ControlPath = "~/.ssh/master-%r@%n:%p";
+          AddKeysToAgent = "confirm";
         };
-        rbg = {
-          host = "rbg rbg.matech.cx";
-          user = "madeddie";
-          hostname = "rbg.madtech.cx";
-          forwardAgent = true;
-          localForwards = [
-            {
-              bind.port = 10004;
-              host.address = "localhost";
-              host.port = 10004;
-            }
-            {
-              bind.port = 10005;
-              host.address = "localhost";
-              host.port = 10005;
-            }
-            {
-              bind.port = 10006;
-              host.address = "localhost";
-              host.port = 10006;
-            }
-            {
-              bind.port = 10010;
-              host.address = "localhost";
-              host.port = 10010;
-            }
-            {
-              bind.port = 10011;
-              host.address = "localhost";
-              host.port = 10011;
-            }
-            {
-              bind.port = 10012;
-              host.address = "localhost";
-              host.port = 10012;
-            }
-          ];
+        "Host rbg rbg.madtech.cx" = {
+          User = "madeddie";
+          HostName = "rbg.madtech.cx";
+          ForwardAgent = true;
         };
-        home = {
-          host = "home home.matech.cx";
-          user = "madeddie";
-          hostname = "home.madtech.cx";
-          forwardAgent = true;
+        "Host home home.madtech.cx" = {
+          User = "madeddie";
+          HostName = "home.madtech.cx";
+          ForwardAgent = true;
         };
       };
       includes = [
