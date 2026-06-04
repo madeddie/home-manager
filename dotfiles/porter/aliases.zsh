@@ -99,11 +99,14 @@ alias gm="goose -dir zarf/database/migrations"
 alias plint="GOWORK=off golangci-lint run -c ../.github/golangci-lint.yaml --new-from-rev=origin/main"
 
 # porter db config
-export PGUSER="op://Shared/Engineering RW Role - Production Database/username"
-export PGPASSWORD="op://Shared/Engineering RW Role - Production Database/password"
-export PGHOST="op://Shared/Engineering RW Role - Production Database/host"
-export PGDATABASE="op://Shared/Engineering RW Role - Production Database/database"
-export PGSSLMODE=require
+function porterdb {
+  local -x PGUSER="op://Shared/Engineering RW Role - Production Database/username"
+  local -x PGPASSWORD="op://Shared/Engineering RW Role - Production Database/password"
+  local -x PGHOST="op://Shared/Engineering RW Role - Production Database/host"
+  local -x PGDATABASE="op://Shared/Engineering RW Role - Production Database/database"
+  local -x PGSSLMODE=require
 
-alias porterdb="op run --no-masking -- psql"
+  op run --no-masking -- psql
+}
+
 alias togglets='if $(tailscale status > /dev/null); then echo "turning off"; tailscale down; else echo "turning on"; tailscale up; fi'
