@@ -106,3 +106,4 @@ export PGDATABASE="op://Shared/Engineering RW Role - Production Database/databas
 export PGSSLMODE=require
 
 alias porterdb="op run --no-masking -- psql"
+alias togglets='if $(tailscale status > /dev/null); then echo "turning off"; tailscale down; else echo "turning on"; tailscale up; fi'
