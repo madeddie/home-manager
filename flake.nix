@@ -34,14 +34,14 @@
       x86_64-linux = home-manager.defaultPackage.x86_64-linux;
     };
     # Personal Macbook Air
-    homeConfigurations."edwin@Edwins-MacBook-Air" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."edwin@madbook" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
       modules = [
         nvf.homeManagerModules.default
         sops-nix.homeManagerModules.sops
         ./common.nix
-        ./home_edwinATEdwins-MacBook-Air.local.nix
+        ./home_edwinATmadbook.local.nix
       ];
       extraSpecialArgs = {
         inherit madeddie-nur;
