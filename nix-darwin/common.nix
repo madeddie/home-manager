@@ -12,6 +12,9 @@
     enable = true;
     greedyCasks = true;
     onActivation.cleanup = "zap";
+    onActivation.extraFlags = [
+      "--force-cleanup"
+    ];
     casks = [
       "ghostty"
       "hammerspoon"

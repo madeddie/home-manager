@@ -353,6 +353,7 @@
       extraConfig = ''
         set -g default-command ${pkgs.zsh}/bin/zsh
         bind -N "Send the prefix key through to the application" C-a send-prefix
+        set-option -g renumber-windows on
       '';
       plugins = with pkgs; [
         tmuxPlugins.extrakto
